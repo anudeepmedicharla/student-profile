@@ -1,0 +1,51 @@
+﻿@{
+    var id = Request["c"];
+    var ds = Database.Open("database");
+    var SQLSELECT = "SELECT * FROM information WHERE branch=@0";
+    var data=ds.Query(SQLSELECT,id);
+  
+    }
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <link href="StyleSheet.css" rel="stylesheet" />
+
+    </head>
+    <body>
+         @RenderPage("staticmenu.cshtml")
+         <div id="section">     
+    <a href="branchpage.cshtml?c=IT" class="@id">Information Technology</a>
+    <a href="branchpage.cshtml?c=CSE">CSE</a>
+    <a href="branchpage.cshtml?c=EEE">EEE</a>
+    <a href="branchpage.cshtml?c=ECE">ECE</a>
+    <a href="branchpage.cshtml?c=mech">Mechanical</a>
+    <a href="branchpage.cshtml?c=civil">Civil</a>
+    <a href="branchpage.cshtml?c=auto">Automobile</a>
+       
+   </div>
+        <div id="main_content">
+        
+            @foreach(var row in data)
+            {
+               <a href="Studentinformation.cshtml?id=@row.idno"><div id="cell">
+                  
+                
+                    <p class="name">@row.name</p>
+                    <p class="IDno">IDno: @row.idno</p>
+                    <p class="branch">Branch: @row.branch</p>
+                   </div>
+                </a>
+                 
+            }
+              
+    </div>    
+
+   
+        
+        
+    </body>
+</html>

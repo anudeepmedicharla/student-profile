@@ -1,0 +1,49 @@
+﻿  @{
+       var db= Database.Open("database");
+       var sqlQ = "SELECT * FROM information";
+       var data = db.Query(sqlQ);
+     }
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Student profile/students</title>
+<link href="StyleSheet.css" rel="stylesheet" />
+</head>
+
+<body>
+   @RenderPage("staticmenu.cshtml")
+   <div id="section">     
+    <a href="branchpage.cshtml?c=IT">information technology</a>
+    <a href="branchpage.cshtml?c=CSE">CSE</a>
+    <a href="branchpage.cshtml?c=EEE">EEE</a>
+    <a href="branchpage.cshtml?c=ECE">ECE</a>
+    <a href="branchpage.cshtml?c=mech">mechanical</a>
+    <a href="branchpage.cshtml?c=civil">civil</a>
+    <a href="branchpage.cshtml?c=auto">automobile</a>
+       
+   </div>
+    <a href="addstudent" style="padding-left: 40px;padding-top:-10px;float:left; ">
+    <img style="padding-left: 40px; margin-top: -30px" src="User-Add.png" alt="no image">
+    </a>
+    
+        
+    <div id="main_content">
+        
+            @foreach(var row in data)
+            {
+               <a href="Studentinformation.cshtml?id=@row.idno"><div id="cell">
+                  
+                
+                    <p class="name">@row.name</p>
+                    <p class="IDno">IDno: @row.idno</p>
+                    <p class="branch">Branch: @row.branch</p>
+                   </div>
+                </a>
+                 
+            }
+              
+    </div>    
+   
+</body>
+</html>

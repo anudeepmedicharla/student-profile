@@ -1,0 +1,50 @@
+body{
+   
+    
+}
+
+h1{
+    font-family: 'Segoe UI light';
+    font-weight: 100;
+}
+
+#form{
+    font-family: 'Segoe UI light';
+    font-size: large;
+    
+    text-align: center;
+    
+}
+
+#name{
+  
+   margin-left: 20px;
+  text-align: center;
+  outline: #808080 solid 1px;
+  font-family: 'Segoe UI';
+}
+
+#id{
+    margin-left: 20px;
+    outline: #808080 solid 1px;
+}
+
+#branch{
+    margin-left: 20px;
+    margin-right: 16px;
+    outline: #808080 solid 1px;
+}
+
+#mobile{
+    margin-left: 20px;
+    outline: #808080 solid 1px;
+    margin-right: 19px;
+    
+}
+
+#email{
+    margin-left: 20px;
+    outline: #808080 solid 1px;
+    margin-right: 5px;
+}
+

@@ -1,0 +1,36 @@
+﻿@{
+    var id=Request["id"];
+    var db=Database.Open("Database");
+    var sql="select * from staffinformation where name=@0";
+    var data=db.QuerySingle(sql,id);
+}
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <link href="detailedinformation.css" rel="stylesheet"type="text/css">
+        
+    </head>
+    <body>
+         @RenderPage("staticmenu.cshtml")
+             <div id="side">
+                 <h1>Detailed profile</h1>
+        <img src="Windows 8 Login.png" alt="error" style="float: left;">
+        </div>
+        <div id="content">
+        <p>Name: @data.name </p>     
+        <p>Branch: @data.branch</p> 
+        <p>Designation: @data.designation</p> 
+        <p>Mobile: @data.mobile</p>        
+        <p>Experience: @data.experience years</p> 
+        <p>Email: @data.email</p>
+        <p>Specialisation: @data.specialisation</p>   
+     </div>
+   
+    
+    </body>
+
+</html>

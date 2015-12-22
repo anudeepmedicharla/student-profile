@@ -1,0 +1,95 @@
+h1{
+   font-family: 'Segoe Script';
+   color: #ae113d;
+   font-weight: 100;
+}
+#top {
+height:40px;
+background-color:#ae113d;
+font-family:'Segoe UI light';
+color:white;
+margin-top:-0.7%;
+margin-left:-1%;
+margin-right:-10px;
+
+}
+
+#text {
+font-size:larger;
+padding-left:20px;
+padding-top:5px;
+
+}
+#text a{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+#topmenu{
+    font-family:'Segoe UI';
+    padding-left:80%;
+    margin-top:-1.5%;
+    height: 47px;
+    
+}
+
+#topmenu a{
+    text-decoration:none;
+    color:white;
+    margin-right:7%;
+    padding-left:1%;
+    
+    }
+
+#anudeep{
+    outline-style: solid;
+    outline-color: #ae113d;
+    width: 200px;
+    outline-width: thin;
+    font-family: 'Segoe UI light';
+    background-color: #ae113d;
+    color: #fff;
+    text-align: center;
+    box-shadow: 5px 30px 40px #e4e4e4;
+    margin-left: 300px;
+    float: left;
+}
+
+#sanith{
+    outline-style: solid;
+    outline-color: #ae113d;
+    width: 200px;
+    outline-width: thin;
+    font-family: 'Segoe UI light';
+    background-color: #ae113d;
+    color: #fff;
+    text-align: center;
+    box-shadow: 5px 30px 40px #e4e4e4;
+    margin-left: 40px;
+    float: left;
+}
+#srinivas{
+    outline-style: solid;
+    outline-color: #ae113d;
+    width: 200px;
+    outline-width: thin;
+    font-family: 'Segoe UI light';
+    background-color: #ae113d;
+    color: #fff;
+    text-align: center;
+    box-shadow: 10px 30px 40px #e4e4e4;
+    margin-left: 40px;
+    float: left;
+}
+
+
+#devaki{
+    font-family: 'Segoe Script';
+    padding-top: 500px;
+    font-size: x-large;
+    color: #b81b1b;
+    padding-left: 1000px;
+    
+}

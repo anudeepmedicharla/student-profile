@@ -1,0 +1,49 @@
+﻿@{   
+    var db1 = Database.Open("database");
+    var studentname=Request["formName"];
+    var studentid=Request["formId"];
+    var studentbranch=Request["formBranch"];
+    var studentmobile=Request["formMobile"];
+    var studentemail=Request["formEmail"];
+    if(IsPost){
+        var sqlinsert="INSERT INTO information(name,idno,branch,mobile,email) VALUES(@0, @1, @2, @3, @4)";
+        db1.Execute(sqlinsert,studentname,studentid,studentbranch,studentmobile,studentemail);
+        Response.Redirect(@Href("~/ContentPage.cshtml"));
+    }
+ }
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <link href="addstudent.css" rel="stylesheet" type="text/css">
+        <link href="stylesheet.css" rel="stylesheet">
+    </head>
+    <body>
+        @RenderPage("staticmenu.cshtml")
+        <h1>Add a new student to the database</h1>
+        <div id="form">
+        <form action="" method="post">
+        <p class="name">Name:<input id="name" type="text" name="formName"/></p>
+        <p class="id">IDno:<input  id ="id"type="text" name="formId"/></p>
+       <p>Branch:<select  name="formbranch">
+        <option value="IT">IT</option>
+        <option value="CSE">CSE</option>
+        <option value="EEE">EEE</option>
+        <option value="ECE">ECE</option>
+        <option value="civil">civil</option>
+        <option value="auto">automobile</option>
+        <option value="mech">mehanical</option>
+        </select>
+           </p>
+        <p>Mobile:<input id="mobile"type="text" name="formMobile"/></p>
+        <p>Email:<input id="email" type="text" name="formEmail"/></p>
+        <p><input id="addstudent" type="submit" value="add student"/>
+        <input id="reset" type="reset" value="reset"/></p>
+        </form>
+            </div>
+        
+    </body>
+</html>

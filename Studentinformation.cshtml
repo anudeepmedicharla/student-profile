@@ -1,0 +1,41 @@
+﻿@{
+    var id=Request["id"];
+    var SQLSELECT="SELECT * FROM information where idno=@0";
+    var db = Database.Open("database");
+    var movie=db.QuerySingle(SQLSELECT,id);
+    var name=movie.name;
+    var roll=movie.idno;
+    var branch=movie.branch;
+    var mobile=movie.mobile;
+    var interests=movie.interests;
+    var email=movie.email;
+
+}
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="detailedinformation.css" type="text/css">
+        <link href="StyleSheet.css" rel="stylesheet" type="text/css">
+        <meta charset="utf-8" />
+        <title></title>
+    </head>
+    <body>
+      @RenderPage("staticmenu.cshtml")
+        <div id="side">
+        <h1>Detailed profile</h1>
+        <img src="Windowsprofile.png" alt="error" style="float: left;">
+            </div>
+        <div id="content">
+        <p>Name: @name</p>
+        <p>Idno: @roll</p>
+        <p>Branch: @branch</p>
+        <p>Mobile: @mobile</p>
+        <p>Interests: @interests</p>
+        <p>Email: @email</p>
+   
+     </div>
+        
+    </body>
+</html>

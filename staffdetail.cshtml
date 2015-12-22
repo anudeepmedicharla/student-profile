@@ -1,0 +1,44 @@
+﻿@{
+    var id = Request["b"];
+    var ds = Database.Open("database");
+    var SQL = "SELECT *FROM staffinformation where branch=@0 ";
+    var data1=ds.Query(SQL,id);
+   
+
+}
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <link href="staff.css" rel="stylesheet" type="text/css">
+         <link href="detailedinformation.css" rel="stylesheet">     
+        
+    </head>
+    <body>
+        @RenderPage("staticmenu.cshtml")
+      <div id="options">
+        <a href="staffdetail.cshtml?b=IT">information technology</a>
+        <a href="staffdetail.cshtml?b=CSE">CSE</a>
+        <a href="staffdetail.cshtml?b=ECE">ECE</a>
+        <a href="staffdetail.cshtml?b=EEE">EEE</a>
+        <a href="staffdetail.cshtml?b=mech">mechanical</a>
+        <a href="staffdetail.cshtml?b=civil">civil</a>
+        <a href="staffdetail.cshtml?b=auto">automobile</a>      
+        
+        </div>     
+         <div id="main_content1">
+       
+         @foreach(var row1 in data1){
+          <a href="staffindetail.cshtml?id=@row1.name">
+          <div id="cell1">
+         <p class="name">name:@row1.name</p>
+         <p class="branch">branch:@row1.branch</p>
+         <p class="mobile">mobile:@row1.mobile</p>
+        </div></a>
+}
+             </div>
+    </body>
+</html>

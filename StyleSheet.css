@@ -1,0 +1,124 @@
+﻿
+body{
+    background-color: #e4e4e4;
+}
+#top {
+height:40px;
+background-color:#009688;
+font-family:'Segoe UI';
+color:white;
+margin-top:-0.7%;
+margin-left:-1%;
+margin-right:-10px;
+
+}
+
+#text {
+font-size:larger;
+padding-left:20px;
+padding-top:7px;
+
+}
+#text a{
+    text-decoration: none;
+    color: white;
+}
+
+
+#topmenu{
+    font-size: 17px;
+    padding-left:80%;
+    margin-top:-1.6%;
+    height: 47px;
+    
+}
+
+#topmenu a{
+    text-decoration:none;
+    color:white;
+    margin-right:7%;
+    padding-left:1%;
+    
+    }
+
+
+
+#main_content{
+    font-family: 'Segoe UI ';
+    padding-left:250px;
+    padding-top: 100px;
+}
+
+
+#cell {
+    color: white;
+    background-color:#607d8b;
+    width: 260px;
+    float: left;
+    height: 260px;
+    margin: 3px;
+    border-radius: 3px;
+   
+    box-shadow: 1px 15px 20px #e4e4e4;
+    padding-left: 10px;
+    
+}
+
+
+
+
+#cell:hover > p.name {
+    -webkit-transition-duration: 0.5s;
+     padding-top: 50px;  
+     animation-name: slidein; 
+}
+
+
+#cell:hover > p.IDno{
+    -webkit-transition-duration: 0.5s;
+     visibility: visible;
+     text-align: center;
+}
+#cell:hover > p.branch{
+-webkit-transition-duration: 0.5s;
+visibility: visible;   
+text-align: center; 
+}
+
+#cell p.name{
+    -webkit-transition-duration: 0.2s;
+    text-align: center;
+   padding-top: 200px;
+   
+   
+}
+
+#cell p.IDno{
+    visibility: hidden;
+    padding-top: -10px;
+}
+
+#cell p.branch{
+    visibility: hidden;
+    
+}
+
+#section{
+    padding-top: 50px;
+    padding-left: 270px;
+    font-size: larger;
+}
+
+#section a{
+    padding-top: -30px;    
+    float: left;   
+    height: 50px;
+    text-align: left;
+    font-family: 'Segoe UI ';
+    padding-right: 50px;
+    color: #000;
+    text-decoration: none;
+    
+}
+
+
